@@ -1,3 +1,3 @@
-struct MyLibrary {
+public struct MyLibrary {
     var text = "Hello, World!"
 }
