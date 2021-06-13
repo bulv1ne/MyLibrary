@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "MyLibrary",
             targets: ["MyLibrary"]),
+        .executable(
+            name: "MyLibraryExec",
+            targets: ["MyLibrary"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
