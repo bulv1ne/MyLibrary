@@ -6,4 +6,4 @@ RUN swift build -c release
 FROM swift:slim
 WORKDIR /project
 COPY --from=builder /project .
-CMD [".build/release/MyLibraryExec"]
+CMD [".build/release/MyExecutable"]

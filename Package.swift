@@ -11,8 +11,8 @@ let package = Package(
             name: "MyLibrary",
             targets: ["MyLibrary"]),
         .executable(
-            name: "MyLibraryExec",
-            targets: ["MyLibrary"]),
+            name: "MyExecutable",
+            targets: ["MyExecutable"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,6 +24,9 @@ let package = Package(
         .target(
             name: "MyLibrary",
             dependencies: []),
+        .target(
+            name: "MyExecutable",
+            dependencies: ["MyLibrary"]),
         .testTarget(
             name: "MyLibraryTests",
             dependencies: ["MyLibrary"]),

@@ -1,0 +1,4 @@
+FROM swift:latest as builder
+WORKDIR /project
+COPY . .
+CMD ["swift", "test"]
