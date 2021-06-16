@@ -12,7 +12,7 @@ let package = Package(
             targets: ["MyLibrary"]),
         .executable(
             name: "MyExecutable",
-            targets: ["MyExecutable"]),
+            targets: ["MyExecutable"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -29,6 +29,6 @@ let package = Package(
             dependencies: ["MyLibrary"]),
         .testTarget(
             name: "MyLibraryTests",
-            dependencies: ["MyLibrary"]),
+            dependencies: ["MyLibrary"])
     ]
 )
