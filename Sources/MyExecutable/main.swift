@@ -25,6 +25,9 @@ var request = URLRequest(url: url)
 var finalTimestamp: Date?
 
 let task = session.dataTask(with: request) { (data, response, error) in
+    defer {
+        sema.signal()
+    }
     if let error = error {
         print("Error: \(error)")
     } else if let data = data, let httpResponse = response as? HTTPURLResponse {
@@ -45,7 +48,6 @@ let task = session.dataTask(with: request) { (data, response, error) in
         print("Don't know what this error is...")
 
     }
-    sema.signal()
 }
 
 task.resume()
