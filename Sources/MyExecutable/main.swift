@@ -1,4 +1,7 @@
 import Foundation
+#if swift(>=5.4.1)
+import FoundationNetworking
+#endif
 import MyLibrary
 
 print("Hello world")
